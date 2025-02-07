@@ -1,3 +1,0 @@
-<?php
-$lang['IntSCHED']='Program';
-?>
