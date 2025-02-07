@@ -1,0 +1,38 @@
+# arrancar
+> docker-compose up -d
+
+#verificar contenedores
+>docker-compose ps
+
+#logs
+docker-compose logs
+
+# Parar todos os contenedores
+
+docker stop $(docker ps -aq)
+
+
+# Eliminar todos os contenedores
+docker rm $(docker ps -aq)
+
+# Eliminar volumes
+docker volume prune
+
+# Eliminar redes
+docker network prune
+
+
+# Esquemda
+ianseo/
+├── docker-compose.yml
+├── Dockerfile
+├── ianseo.conf
+├── data/                      # Directorio para volumes persistentes
+│   ├── mysql/                 # Datos da base de datos MySQL
+│   └── ianseo/                # Datos da aplicación web
+└── www/                       # Código fonte da aplicación
+    ├── index.php              # Arquivos PHP de Ianseo
+    ├── includes/              # Configuración interna
+    ├── config.php             # Configuración de conexión á base de datos
+    ├── assets/                # Imaxes, CSS, JS
+    └── uploads/               # Ficheiros subidos
